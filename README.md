@@ -1,4 +1,4 @@
-<h1 align="center">Movie Cards Library Statefull</h1>
+<h1 align="center">Frontend Online Store</h1>
 <p align="center">
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://twitter.com/defauth8" target="_blank">
@@ -7,7 +7,7 @@
 
 **Descrição**
 
-Aplicação web de um biblioteca de filmes. Podendo criar, listar e filtrar por filmes.
+> Descrição do projeto 
 
 ### :nut_and_bolt: Tecnologias
 
@@ -21,10 +21,10 @@ Esse projeto foi desenvolvido com a seguinte técnologias:
 
 ```bash
 # Clone o repositório
-git clone https://github.com/defauth98/movie-cards-library-stateful
+git clone https://github.com/defauth98/frontend-online-store
 
 # Entre no diretório
-cd movie-cards-library-stateful
+cd frontend-online-store
 
 # Instale as depedências
 npm install
