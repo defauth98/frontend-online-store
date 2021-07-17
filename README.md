@@ -7,7 +7,7 @@
 
 **Descrição**
 
-Projeto realizado durante o curso de desenvolvimento na Trybe, realizado em grupo para colocar em praticas as métodologias ágeis, como Kanban e Scrum. E consite em listar e buscar por produtos usando a API do mercado livre.
+Projeto realizado durante o curso de desenvolvimento de Software na Trybe, feito em grupo para colocar em praticas as métodologias ágeis, como Kanban e Scrum. E consite em listar e buscar por produtos usando a API do mercado livre.
 
 ### :nut_and_bolt: Tecnologias
 
