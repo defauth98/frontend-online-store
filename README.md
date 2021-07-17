@@ -7,11 +7,11 @@
 
 **Descrição**
 
-> Descrição do projeto 
+> Projeto realizado durante o curso de desenvolvimento na Trybe, realizado em grupo para colocar em praticas as métodologias ágeis, como Kanban e Scrum. E consite em listar e buscar por produtos usando a API do mercado livre.
 
 ### :nut_and_bolt: Tecnologias
 
-Esse projeto foi desenvolvido com a seguinte técnologias:
+Esse projeto foi desenvolvido com a seguinte técnologia:
 
 - [React][reactjs]
 
@@ -33,10 +33,54 @@ npm install
 npm start
 ```
 
-#### Autor
+#### :student: Autores
 
-👤 **Daniel Ribeiro**
-
-- Twitter: [@defauth8](https://twitter.com/defauth8)
-- Github: [@defauth8](https://github.com/defauth98)
-- LinkedIn: [@daniel-ribeiro-397604164](https://linkedin.com/in/daniel-ribeiro-397604164)
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/defauth98">
+        <img src="https://avatars.githubusercontent.com/u/52966246?v=4" width="100px;" alt=""/>
+        <br />
+          <sub>
+            <b>Daniel Ribeiro</b>
+          </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/LucasH-Paz">
+        <img src="https://avatars.githubusercontent.com/u/78622542?v=4" width="100px;" alt=""/>
+        <br />
+          <sub>
+            <b>Lucas Paz</b>
+          </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/phlopes">
+        <img src="https://avatars.githubusercontent.com/u/78616150?v=4" width="100px;" alt=""/>
+        <br />
+          <sub>
+            <b>Paulo Henrique</b>
+          </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/MarcosAlbuquerque">
+        <img src="https://avatars.githubusercontent.com/u/74433039?" width="100px;" alt=""/>
+        <br />
+          <sub>
+            <b>Marcos Albuquerque</b>
+          </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/LuizVaccari">
+        <img src="https://avatars.githubusercontent.com/u/78622859?v=4" width="100px;" alt=""/>
+        <br />
+          <sub>
+            <b>Luiz Vaccari</b>
+          </sub>
+      </a>
+    </td>
+  </tr>
+</table>
