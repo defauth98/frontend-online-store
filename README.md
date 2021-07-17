@@ -7,7 +7,7 @@
 
 **Descrição**
 
-> Projeto realizado durante o curso de desenvolvimento na Trybe, realizado em grupo para colocar em praticas as métodologias ágeis, como Kanban e Scrum. E consite em listar e buscar por produtos usando a API do mercado livre.
+Projeto realizado durante o curso de desenvolvimento na Trybe, realizado em grupo para colocar em praticas as métodologias ágeis, como Kanban e Scrum. E consite em listar e buscar por produtos usando a API do mercado livre.
 
 ### :nut_and_bolt: Tecnologias
 
@@ -17,7 +17,7 @@ Esse projeto foi desenvolvido com a seguinte técnologia:
 
 [reactjs]: https://reactjs.org
 
-#### :thinking: Como rodar
+### :thinking: Como rodar
 
 ```bash
 # Clone o repositório
@@ -33,7 +33,7 @@ npm install
 npm start
 ```
 
-#### :student: Autores
+### :bust_in_silhouette: Autores
 
 <table>
   <tr>
