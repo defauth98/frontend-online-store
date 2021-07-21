@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { HashRouter, Switch, Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import ProductDetails from './pages/ProductDetails/index';
 import Cart from './pages/Cart/index';
@@ -124,7 +124,7 @@ class Routes extends React.Component {
     this.updateLocalStorage();
 
     return (
-      <BrowserRouter>
+      <HashRouter>
         <Switch>
           <Route
             exact
@@ -159,7 +159,7 @@ class Routes extends React.Component {
             render={ (props) => <Cart { ...props } cartProduct={ cartProducts } /> }
           />
         </Switch>
-      </BrowserRouter>
+      </HashRouter>
     );
   }
 }
