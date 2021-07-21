@@ -54,28 +54,31 @@ class Home extends React.Component {
     return (
       <main id="home-page">
         <CategoriesBar
-          categories={ categories }
-          onClick={ this.getProductsFromCategory }
+          categories={categories}
+          onClick={this.getProductsFromCategory}
         />
 
         <section>
-          <SearchBar func={ this.generateArray } />
+          <SearchBar func={this.generateArray} />
 
           <Button>
             <Link data-testid="shopping-cart-button" to="/Cart">Cart</Link>
           </Button>
 
           <p data-testid="shopping-cart-size">
-            { cartSize }
+            {cartSize}
           </p>
 
-          {productsList.length === 0
-            ? <p>Nenhum produto foi encontrado</p>
-            : (
-              <ListProducts
-                productsList={ productsList }
-                addToCart={ addToCart }
-              />)}
+          <div id="project-list">
+            {productsList.length === 0
+              ? <p>Nenhum produto foi encontrado</p>
+              : (
+                <ListProducts
+                  productsList={productsList}
+                  addToCart={addToCart}
+                />)}
+          </div>
+
         </section>
       </main>
     );
