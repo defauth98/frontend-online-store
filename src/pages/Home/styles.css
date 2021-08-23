@@ -1,9 +1,3 @@
-main {
+.home-page {
   display: flex;
-}
-
-#project-list {
-  border: 1px solid blue;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
 }

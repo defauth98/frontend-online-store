@@ -7,18 +7,18 @@ function CategoriesBar(props) {
   const { categories, onClick } = props;
 
   return (
-    <aside>
-      <h1>Categorias:</h1>
-      <ul>
+    <aside className="category-bar">
+      <h1 className="category-bar-title">Categorias:</h1>
+      <ul className="category-bar-list">
         {categories.map((category) => (
           <button
-            className="category-item"
+            className="category-bar-item"
             type="button"
-            key={ category.id }
+            key={category.id}
             data-testid="category"
-            onClick={ () => onClick(category.id) }
+            onClick={() => onClick(category.id)}
           >
-            { category.name }
+            {category.name}
           </button>))}
       </ul>
     </aside>

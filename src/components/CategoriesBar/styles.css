@@ -1,21 +1,32 @@
-aside {
-  border: 1px solid #333;
+.category-bar {
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  border-right: 2px solid #ddd;
+  margin: 2rem
+}
+
+.category-bar-title {
   margin: 1rem;
-  padding: 1rem;
-  width: 300px;
-}
-
-aside h1 {
   font-weight: 500;
-  margin-bottom: 0.6rem;
+  font-size: 1.5rem;
 }
 
-.category-item {
+.category-bar-list {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3rem;
+}
+
+.category-bar-item {
   background: transparent;
   border: none;
-  cursor: pointer;
-  display: block;
-  font-size: 1rem;
-  line-height: 1.5;
-  text-decoration: underline;
+  transition: all 0.2s;
+  text-align: left;
+  margin-bottom: 0.2rem;
+  width: 80%;
+}
+
+.category-bar-item:hover {
+  color: orange;
 }

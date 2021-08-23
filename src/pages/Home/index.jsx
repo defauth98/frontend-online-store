@@ -52,7 +52,7 @@ class Home extends React.Component {
     const { addToCart, cartSize } = this.props;
 
     return (
-      <main id="home-page">
+      <main className="home-page">
         <CategoriesBar
           categories={categories}
           onClick={this.getProductsFromCategory}
