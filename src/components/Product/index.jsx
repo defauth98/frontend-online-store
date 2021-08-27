@@ -9,8 +9,6 @@ const MAX_LENGTH = 30;
 class Product extends React.Component {
   render() {
     const { title, imagePath, price, itemId, techSpecs, addToCart } = this.props;
-    const { free_shipping: freeShipping } = this.props;
-
     const location = {
       pathname: `/itemDetails/${itemId}`,
       state: techSpecs,
