@@ -14,9 +14,9 @@ function CategoriesBar(props) {
           <button
             className="category-bar-item"
             type="button"
-            key={category.id}
+            key={ category.id }
             data-testid="category"
-            onClick={() => onClick(category.id)}
+            onClick={ () => onClick(category.id) }
           >
             {category.name}
           </button>))}

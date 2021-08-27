@@ -1,8 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
 import PropTypes from 'prop-types';
-import Button from '../../components/Button/index';
+
 import CategoriesBar from '../../components/CategoriesBar/index';
 import ListProducts from '../../components/ListProducts';
 import SearchBar from '../../components/SearchBar';
@@ -58,16 +56,8 @@ class Home extends React.Component {
           onClick={this.getProductsFromCategory}
         />
 
-        <section>
-          <SearchBar func={this.generateArray} />
-
-          <Button>
-            <Link data-testid="shopping-cart-button" to="/Cart">Cart</Link>
-          </Button>
-
-          <p data-testid="shopping-cart-size">
-            {cartSize}
-          </p>
+        <section className="products-section">
+          <SearchBar func={this.generateArray} cartSize={cartSize} />
 
           <div id="project-list">
             {productsList.length === 0

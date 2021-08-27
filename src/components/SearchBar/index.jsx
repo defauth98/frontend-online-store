@@ -1,7 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import './styles.css';
+
+import searchIcon from '../../assets/search-icon.png';
+import cartIcon from '../../assets/cart-icon.png';
 
 class SearchBar extends React.Component {
   constructor() {
@@ -18,15 +22,15 @@ class SearchBar extends React.Component {
     this.setState({
       [name]: value,
     });
-  }
+  };
 
   render() {
     const { itemToSearch } = this.state;
-    const { func } = this.props;
+    const { func, cartSize } = this.props;
+
     return (
-      <header>
-        <label htmlFor="input-search" data-testid="home-initial-message">
-          Digite algum termo de pesquisa ou escolha uma categoria.
+      <header className="search-bar">
+        <div className="search-bar-container">
           <input
             data-testid="query-input"
             name="itemToSearch"
@@ -34,15 +38,37 @@ class SearchBar extends React.Component {
             id="input-search"
             onChange={ this.handleChange }
             value={ itemToSearch }
+            className="search-bar-input"
           />
-        </label>
-        <button
-          data-testid="query-button"
-          type="button"
-          onClick={ () => func(itemToSearch) }
-        >
-          Buscar
-        </button>
+          <button
+            data-testid="query-button"
+            type="button"
+            onClick={ () => func(itemToSearch) }
+            className="search-bar-button"
+          >
+            <img src={ searchIcon } alt="Icone de pesquisa" />
+          </button>
+        </div>
+
+        <div className="cart">
+          <button type="button" className="cart-button">
+            <Link data-testid="shopping-cart-button" to="/Cart">
+              <img
+                src={ cartIcon }
+                alt="Icone do carrinho"
+                className="cart-icon"
+              />
+            </Link>
+          </button>
+          <p
+            data-testid="shopping-cart-size"
+            className="cart-size"
+          >
+            {cartSize}
+            {' '}
+            {cartSize === 1 ? 'Item' : 'Itens'}
+          </p>
+        </div>
       </header>
     );
   }
@@ -50,6 +76,7 @@ class SearchBar extends React.Component {
 
 SearchBar.propTypes = {
   func: PropTypes.func,
+  cartSize: PropTypes.number,
 }.isRequired;
 
 export default SearchBar;
