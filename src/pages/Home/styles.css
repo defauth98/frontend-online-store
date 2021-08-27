@@ -6,3 +6,9 @@
   width: 85%;
   padding: 2rem 0;
 }
+
+.project-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  padding: 2rem 0;
+}

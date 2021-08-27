@@ -52,20 +52,20 @@ class Home extends React.Component {
     return (
       <main className="home-page">
         <CategoriesBar
-          categories={categories}
-          onClick={this.getProductsFromCategory}
+          categories={ categories }
+          onClick={ this.getProductsFromCategory }
         />
 
         <section className="products-section">
-          <SearchBar func={this.generateArray} cartSize={cartSize} />
+          <SearchBar func={ this.generateArray } cartSize={ cartSize } />
 
-          <div id="project-list">
+          <div className="project-list">
             {productsList.length === 0
               ? <p>Nenhum produto foi encontrado</p>
               : (
                 <ListProducts
-                  productsList={productsList}
-                  addToCart={addToCart}
+                  productsList={ productsList }
+                  addToCart={ addToCart }
                 />)}
           </div>
 

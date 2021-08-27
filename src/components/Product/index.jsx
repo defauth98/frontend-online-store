@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 
 import './styles.css';
 
+const MAX_LENGTH = 30;
+
 class Product extends React.Component {
   render() {
     const { title, imagePath, price, itemId, techSpecs, addToCart } = this.props;
@@ -24,25 +26,34 @@ class Product extends React.Component {
     return (
       <div data-testid="product" className="product-card">
         <img src={ imagePath } alt={ title } />
-        <h1 data-testid="addProductToCart">{title}</h1>
-        <p>{price}</p>
-        {freeShipping && <p data-testid="free-shipping">Frete grátis</p>}
-        <Link to={ location }>
-          <button
-            type="button"
-            data-testid="product-detail-link"
-          >
-            Ver detalhes
-          </button>
-        </Link>
+        <div className="product-info">
+          <h1 data-testid="addProductToCart">
+            {title.length > MAX_LENGTH
+              ? `${String(title).substring(0, MAX_LENGTH)}...`
+              : String(title)}
+          </h1>
 
-        <button
-          data-testid="product-add-to-cart"
-          type="button"
-          onClick={ () => addToCart(product) }
-        >
-          add cart
-        </button>
+          <p className="price">{`R$${price}` }</p>
+
+          <div>
+            <Link to={ location }>
+              <button
+                type="button"
+                data-testid="product-detail-link"
+              >
+                Ver detalhes
+              </button>
+            </Link>
+
+            <button
+              data-testid="product-add-to-cart"
+              type="button"
+              onClick={ () => addToCart(product) }
+            >
+              Adicionar
+            </button>
+          </div>
+        </div>
       </div>
     );
   }
