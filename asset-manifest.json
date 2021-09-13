@@ -1,22 +1,24 @@
 {
   "files": {
-    "main.css": "/frontend-online-store/static/css/main.f7e93695.chunk.css",
-    "main.js": "/frontend-online-store/static/js/main.8fff4fc0.chunk.js",
-    "main.js.map": "/frontend-online-store/static/js/main.8fff4fc0.chunk.js.map",
+    "main.css": "/frontend-online-store/static/css/main.01e6fcd3.chunk.css",
+    "main.js": "/frontend-online-store/static/js/main.0e8e3345.chunk.js",
+    "main.js.map": "/frontend-online-store/static/js/main.0e8e3345.chunk.js.map",
     "runtime-main.js": "/frontend-online-store/static/js/runtime-main.2928fc3e.js",
     "runtime-main.js.map": "/frontend-online-store/static/js/runtime-main.2928fc3e.js.map",
-    "static/js/2.9173843d.chunk.js": "/frontend-online-store/static/js/2.9173843d.chunk.js",
-    "static/js/2.9173843d.chunk.js.map": "/frontend-online-store/static/js/2.9173843d.chunk.js.map",
+    "static/js/2.738e62df.chunk.js": "/frontend-online-store/static/js/2.738e62df.chunk.js",
+    "static/js/2.738e62df.chunk.js.map": "/frontend-online-store/static/js/2.738e62df.chunk.js.map",
     "index.html": "/frontend-online-store/index.html",
-    "precache-manifest.d615266f232789f8305e489bc62ae7d6.js": "/frontend-online-store/precache-manifest.d615266f232789f8305e489bc62ae7d6.js",
+    "precache-manifest.03009e63b91d52863640d2c9d728b528.js": "/frontend-online-store/precache-manifest.03009e63b91d52863640d2c9d728b528.js",
     "service-worker.js": "/frontend-online-store/service-worker.js",
-    "static/css/main.f7e93695.chunk.css.map": "/frontend-online-store/static/css/main.f7e93695.chunk.css.map",
-    "static/js/2.9173843d.chunk.js.LICENSE.txt": "/frontend-online-store/static/js/2.9173843d.chunk.js.LICENSE.txt"
+    "static/css/main.01e6fcd3.chunk.css.map": "/frontend-online-store/static/css/main.01e6fcd3.chunk.css.map",
+    "static/js/2.738e62df.chunk.js.LICENSE.txt": "/frontend-online-store/static/js/2.738e62df.chunk.js.LICENSE.txt",
+    "static/media/cart-icon.png": "/frontend-online-store/static/media/cart-icon.5f8644f0.png",
+    "static/media/search-icon.png": "/frontend-online-store/static/media/search-icon.2aaa6f1b.png"
   },
   "entrypoints": [
     "static/js/runtime-main.2928fc3e.js",
-    "static/js/2.9173843d.chunk.js",
-    "static/css/main.f7e93695.chunk.css",
-    "static/js/main.8fff4fc0.chunk.js"
+    "static/js/2.738e62df.chunk.js",
+    "static/css/main.01e6fcd3.chunk.css",
+    "static/js/main.0e8e3345.chunk.js"
   ]
 }
