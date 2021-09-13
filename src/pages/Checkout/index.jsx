@@ -4,11 +4,13 @@ import PropTypes from 'prop-types';
 import CartResume from '../../components/CartResume';
 import Form from '../../components/Form';
 
+import './styles.css';
+
 class Checkout extends React.Component {
   render() {
     const { cardProducts, totalPrice } = this.props;
     return (
-      <div>
+      <div className="checkout-page">
         <CartResume
           cardProducts={ cardProducts }
           totalPrice={ totalPrice }

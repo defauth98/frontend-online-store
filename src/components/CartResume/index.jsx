@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CartItemResume from '../cartItemResume';
 
+import './styles.css';
+
 class CartResume extends React.Component {
   constructor(props) {
     super(props);
@@ -17,7 +19,7 @@ class CartResume extends React.Component {
     const { cardProducts, totalPrice } = this.state;
 
     const renderCartItems = (
-      <>
+      <div className="cart-resume">
         <h1>Revise Seus Produtos</h1>
         <div>
           {cardProducts.map(({ title, price, thumbnail }) => (
@@ -30,10 +32,10 @@ class CartResume extends React.Component {
           ))}
         </div>
         <h1>{`Total R$ ${totalPrice}`}</h1>
-      </>
+      </div>
     );
 
-    const empty = (<h1>Nenhum Item no Carrinho</h1>);
+    const empty = (<h1 className="empty-title">Nenhum Item no Carrinho</h1>);
     return (
       <div>
         {cardProducts.length === 0 ? empty : renderCartItems }

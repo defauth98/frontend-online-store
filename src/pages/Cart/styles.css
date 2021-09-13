@@ -34,7 +34,7 @@
 }
 
 .cart-page {
-  width: 80%;
+  width: 1000px;
   height: 80%;
   padding: 2rem;
   overflow-y: scroll;
@@ -47,6 +47,7 @@
   height: 10rem;
   padding: 0.3rem;
   margin-bottom: 1rem;
+  justify-content: space-evenly;
 }
 
 .item-thumbnail {

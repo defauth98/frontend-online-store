@@ -76,9 +76,9 @@ class Form extends React.Component {
     const payModes = ['Boleto', 'Visa', 'Mastercard', 'Elo'];
 
     return (
-      <div>
-        <h1>Informações do Comprador</h1>
-        <form>
+      <div className="purchase-container">
+        <h1 className="purchase-title">Informações do Comprador</h1>
+        <form className="purchase-form">
           {data.map(({ type, dataId, maxLength, className, name, placeHolder }) => (
             <Input
               key={ name }
@@ -92,10 +92,10 @@ class Form extends React.Component {
               value={ formInfos.name }
             />
           ))}
-          <fieldset>
-            Método de Pagamento
+          <fieldset className="purchase-method">
+            Método de Pagamento:
             {payModes.map((payMode, index) => (
-              <label htmlFor={ index } key={ index }>
+              <label htmlFor={ index } key={ index } className="method-label">
                 <input
                   type="radio"
                   value={ payMode }
@@ -103,11 +103,11 @@ class Form extends React.Component {
                   id={ index }
                   onClick={ this.handleChange }
                 />
-                { payMode}
+                <span className="method">{payMode}</span>
               </label>
             ))}
           </fieldset>
-          <button type="submit" onClick={ this.resetState }>
+          <button type="submit" onClick={ this.resetState } className="btn">
             Finalizar Compra
           </button>
         </form>
