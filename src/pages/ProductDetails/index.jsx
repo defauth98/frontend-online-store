@@ -22,13 +22,13 @@ class ProductDetails extends React.Component {
           />
         </div>
         <div className="infos-container">
-          <h1 data-testid="product-detail-name" className="product-title">{ title }</h1>
+          <h1 data-testid="product-detail-name" className="product-title">{title}</h1>
           <h2 className="product-price">{` R$ ${price} `}</h2>
           <div>
             <ul className="product-info">
               {attributes.map(({ value_name: value, name }, index) => (
                 <li key={ index } className="product-info-item">
-                  { `${name} : ${value}`}
+                  {`${name} : ${value}`}
                 </li>))}
             </ul>
           </div>

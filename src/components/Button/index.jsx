@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './styles.css';
+
 class Button extends React.Component {
   render() {
     const { testId, children } = this.props;
@@ -8,6 +10,7 @@ class Button extends React.Component {
       <button
         type="button"
         data-testid={ testId }
+
       >
         {children}
       </button>

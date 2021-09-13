@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import Button from '../../components/Button';
+
+import './styles.css';
 
 class Cart extends React.Component {
   /**
@@ -51,52 +52,80 @@ class Cart extends React.Component {
   render() {
     const { cartProduct } = this.state;
     const cartItems = (
-      <section>
+      <section className="cart-page">
+
         {cartProduct.map(({ id, price, thumbnail, title, quantProduct }, index) => (
-          <div key={ index }>
-            <h1 data-testid="shopping-cart-product-name">{title}</h1>
-            <img src={ thumbnail } alt={ title } />
-            <p>{price}</p>
-            <p>
-              Quantidade:&nbsp;
-              <strong data-testid="shopping-cart-product-quantity">
+          <div key={ index } className="item-container">
+            <img src={ thumbnail } alt={ title } className="item-thumbnail" />
+
+            <div className="info-container">
+              <h1
+                data-testid="shopping-cart-product-name"
+                className="item-name"
+              >
+                {title}
+              </h1>
+              <p className="item-price">
+                {`R$${price}`}
+              </p>
+            </div>
+
+            <div className="quantity-container">
+              <button
+                key={ index }
+                type="button"
+                className="increase-item-quantity quantity-btn"
+                data-testid="product-increase-quantity"
+                name="productIncreaseQuantity"
+                onClick={ (e) => this.handleChange(e, id) }
+              >
+                +
+              </button>
+              <strong
+                data-testid="shopping-cart-product-quantity"
+                className="item-quantity-number "
+              >
                 { quantProduct }
               </strong>
-            </p>
-            <button
-              key={ index }
-              type="button"
-              data-testid="product-increase-quantity"
-              name="productIncreaseQuantity"
-              onClick={ (e) => this.handleChange(e, id) }
-            >
-              Aumentar Quantidade
-            </button>
-            <button
-              key={ index + 1 }
-              type="button"
-              data-testid="product-decrease-quantity"
-              name="productDecreaseQuantity"
-              onClick={ (e) => this.handleChange(e, id) }
-            >
-              Diminuir Quantidade
-            </button>
+
+              <button
+                key={ index + 1 }
+                type="button"
+                className="decrease-item-quantity quantity-btn"
+                data-testid="product-decrease-quantity"
+                name="productDecreaseQuantity"
+                onClick={ (e) => this.handleChange(e, id) }
+              >
+                -
+              </button>
+            </div>
+
           </div>))}
       </section>
     );
+
     const noItems = (
-      <p data-testid="shopping-cart-empty-message">
+      <p data-testid="shopping-cart-empty-message" className="cart-empty-message">
         Seu carrinho está vazio
       </p>
     );
+
     return (
-      <div>
+      <div className="cart-btn-container">
+        { cartProduct.length > 0 && <h1 className="cart-title">Itens no carrinho</h1>}
+
         { cartProduct.length === 0 ? noItems : cartItems}
-        <Link to="/checkout" data-testid="checkout-products">
-          <Button>
-            Ir para o carrinho
-          </Button>
+
+        <Link
+          to="/checkout"
+          data-testid="checkout-products"
+          className="cart-btn-link"
+        >
+          <button type="button" className="cart-btn">
+            Finalizar compra
+          </button>
         </Link>
+
       </div>
     );
   }
