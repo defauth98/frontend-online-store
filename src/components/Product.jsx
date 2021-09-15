@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-import './styles.css';
+import '../styles/components/product.css';
 
 const MAX_LENGTH = 30;
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './styles.css';
+import '../styles/components/categoriesBar.css';
 
 function CategoriesBar(props) {
   const { categories, onClick } = props;

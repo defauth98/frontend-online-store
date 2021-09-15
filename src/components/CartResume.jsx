@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import CartItemResume from '../cartItemResume';
+import CartItemResume from './CartItemResume';
 
-import './styles.css';
+import '../styles/components/cartResume.css';
 
 class CartResume extends React.Component {
   constructor(props) {

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-import './styles.css';
+import '../styles/pages/cart.css';
 
 class Cart extends React.Component {
   /**

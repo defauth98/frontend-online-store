@@ -1,9 +1,9 @@
 import React from 'react';
 import { HashRouter, Switch, Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import ProductDetails from './pages/ProductDetails/index';
-import Cart from './pages/Cart/index';
-import Home from './pages/Home/index';
+import ProductDetails from './pages/ProductDetail';
+import Cart from './pages/Cart';
+import Home from './pages/Home';
 import Checkout from './pages/Checkout';
 
 class Routes extends React.Component {

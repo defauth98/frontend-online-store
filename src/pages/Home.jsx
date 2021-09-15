@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import CategoriesBar from '../../components/CategoriesBar/index';
-import ListProducts from '../../components/ListProducts';
-import SearchBar from '../../components/SearchBar';
+import CategoriesBar from '../components/CategoriesBar';
+import ListProducts from '../components/listProducts';
+import SearchBar from '../components/SearchBar';
 
-import { getCategories, getProductsFromCategoryAndQuery } from '../../services/api';
+import { getCategories, getProductsFromCategoryAndQuery } from '../services/api';
 
-import './styles.css';
+import '../styles/pages/home.css';
 
 class Home extends React.Component {
   constructor(props) {

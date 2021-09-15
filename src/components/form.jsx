@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Input from '../Input';
+import Input from './input';
 import data from './data';
-import './style.css';
+
+import '../styles/components/form.css';
 
 class Form extends React.Component {
   constructor() {

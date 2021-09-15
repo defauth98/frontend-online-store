@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-import './styles.css';
+import '../styles/components/searchBar.css';
 
-import searchIcon from '../../assets/search-icon.png';
-import cartIcon from '../../assets/cart-icon.png';
+import searchIcon from '../assets/search-icon.png';
+import cartIcon from '../assets/cart-icon.png';
 
 class SearchBar extends React.Component {
   constructor() {
