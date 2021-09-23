@@ -1,13 +1,16 @@
+/* eslint-disable react/jsx-max-depth */
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { Container, Row, Col, Navbar, Form, FormControl, Button } from 'react-bootstrap';
 import CategoriesBar from '../components/CategoriesBar';
 import ListProducts from '../components/listProducts';
-import SearchBar from '../components/SearchBar';
 
 import { getCategories, getProductsFromCategoryAndQuery } from '../services/api';
 
-import '../styles/pages/home.css';
+import sadEmoji from '../assets/emoji-frown.svg';
+import SearchIcon from '../assets/search.svg';
+import CartIcon from '../assets/cart.svg';
 
 class Home extends React.Component {
   constructor(props) {
@@ -51,25 +54,69 @@ class Home extends React.Component {
 
     return (
       <main className="home-page">
-        <CategoriesBar
-          categories={ categories }
-          onClick={ this.getProductsFromCategory }
-        />
+        <Navbar bg="dark" variant="dark">
+          <Container>
+            <Navbar.Brand href="#home">
+              Frontend Online Store
+            </Navbar.Brand>
 
-        <section className="products-section">
-          <SearchBar func={ this.generateArray } cartSize={ cartSize } />
+            <Form className="d-flex w-50 justify-content-evenly">
+              <FormControl
+                type="search"
+                placeholder="Nome do produto"
+                aria-label="Search"
+                className="w-75"
+              />
+              <Button variant="warning">
+                <img src={ SearchIcon } alt="Icone de pesquisar" />
+              </Button>
+            </Form>
 
-          <div className="project-list">
-            {productsList.length === 0
-              ? <p>Nenhum produto foi encontrado</p>
-              : (
-                <ListProducts
-                  productsList={ productsList }
-                  addToCart={ addToCart }
-                />)}
-          </div>
-
-        </section>
+            <Form className="d-flex w-10 align-items-center">
+              <Button variant="outline-secondary">
+                <img
+                  src={ CartIcon }
+                  alt="Icone do carrinho"
+                />
+              </Button>
+              <h1 className="fs-3 text-white px-3 pt-2">{cartSize}</h1>
+            </Form>
+          </Container>
+        </Navbar>
+        <Container className="vw-50">
+          <Row>
+            <Col sm={ 3 }>
+              <CategoriesBar
+                categories={ categories }
+                onClick={ this.getProductsFromCategory }
+              />
+            </Col>
+            <Col sm={ 5 } className="w-75">
+              {productsList.length === 0
+                ? (
+                  <Container
+                    className="
+                      d-flex flex-column
+                      align-items-center justify-content-center
+                      vh-100
+                     "
+                  >
+                    <img
+                      src={ sadEmoji }
+                      alt="Emoji triste"
+                      width="40px"
+                      className="mb-4"
+                    />
+                    <p>Nenhum produto foi encontrado</p>
+                  </Container>)
+                : (
+                  <ListProducts
+                    productsList={ productsList }
+                    addToCart={ addToCart }
+                  />)}
+            </Col>
+          </Row>
+        </Container>
       </main>
     );
   }

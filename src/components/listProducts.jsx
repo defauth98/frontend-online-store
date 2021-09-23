@@ -2,12 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Product from './Product';
 
+import '../styles/components/list-products.css';
+
 class ListProducts extends React.Component {
   render() {
     const { productsList, addToCart } = this.props;
 
     return (
-      <>
+      <div className="list-products w-100 my-4">
         { productsList.map(
           ({ title, price, thumbnail, id, attributes, shipping }) => (<Product
             title={ title }
@@ -20,7 +22,7 @@ class ListProducts extends React.Component {
             free_shipping={ shipping.free_shipping }
           />),
         )}
-      </>
+      </div>
     );
   }
 }

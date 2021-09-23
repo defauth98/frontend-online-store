@@ -4,8 +4,6 @@ import PropTypes from 'prop-types';
 import CartResume from '../components/CartResume';
 import Form from '../components/form';
 
-import '../styles/pages/checkout.css';
-
 class Checkout extends React.Component {
   render() {
     const { cardProducts, totalPrice } = this.props;

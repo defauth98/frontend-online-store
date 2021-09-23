@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-import '../styles/pages/cart.css';
-
 class Cart extends React.Component {
   /**
    * @param {{cartProduct: [{"title":"Compressor De Ar Mini Bateria ","price":79,"thumbnail":"http://http2.mlstatic.com/D_021-I.jpg","id":"MLB1832642322"}...{}]}} props

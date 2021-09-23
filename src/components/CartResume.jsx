@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CartItemResume from './CartItemResume';
 
-import '../styles/components/cartResume.css';
-
 class CartResume extends React.Component {
   constructor(props) {
     super(props);

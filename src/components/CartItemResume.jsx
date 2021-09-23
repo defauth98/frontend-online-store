@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import '../styles/components/cartItemResume.css';
-
 class CartItemResume extends React.Component {
   render() {
     const { title, thumbnail, price } = this.props;

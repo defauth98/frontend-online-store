@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-import '../styles/components/searchBar.css';
-
+import { FormControl, InputGroup } from 'react-bootstrap';
+import Button from '@restart/ui/esm/Button';
 import searchIcon from '../assets/search-icon.png';
 import cartIcon from '../assets/cart-icon.png';
 

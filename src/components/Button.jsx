@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import '../styles/components/button.css';
-
 class Button extends React.Component {
   render() {
     const { testId, children } = this.props;

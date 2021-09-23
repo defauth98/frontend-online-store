@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { Card, Button, Container } from 'react-bootstrap';
+import CartPlusIcon from '../assets/cart-plus.svg';
 
 import '../styles/components/product.css';
 
-const MAX_LENGTH = 30;
+const MAX_LENGTH = 25;
 
 class Product extends React.Component {
   render() {
@@ -22,37 +24,42 @@ class Product extends React.Component {
     };
 
     return (
-      <div data-testid="product" className="product-card">
-        <img src={ imagePath } alt={ title } />
-        <div className="product-info">
-          <h1 data-testid="addProductToCart">
+      <Card style={ { width: '15rem', height: '24rem' } } className="m-2">
+
+        <Card.Img variant="top" className="h-50" src={ imagePath } />
+
+        <Card.Body>
+          <Card.Title>
             {title.length > MAX_LENGTH
-              ? `${String(title).substring(0, MAX_LENGTH)}...`
+              ? `${String(title).substring(0, MAX_LENGTH)}${' '}...`
               : String(title)}
-          </h1>
+          </Card.Title>
 
-          <p className="price">{`R$${price}` }</p>
+          <Card.Text>{`R$${price}` }</Card.Text>
 
-          <div>
-            <Link to={ location }>
-              <button
-                type="button"
-                data-testid="product-detail-link"
+          <Container className="mt-4 d-flex p-0">
+            <Link to={ location } className="me-auto">
+              <Button
+                variant="primary"
+                style={ { height: '2rem' } }
+                className="d-flex"
               >
                 Ver detalhes
-              </button>
+              </Button>
             </Link>
 
-            <button
-              data-testid="product-add-to-cart"
-              type="button"
+            <Button
               onClick={ () => addToCart(product) }
+              style={ { height: '2rem' } }
+              className="d-flex"
+              variant="secondary"
             >
-              Adicionar
-            </button>
-          </div>
-        </div>
-      </div>
+              <img src={ CartPlusIcon } alt="Icone Adicionar ao carrinho" />
+            </Button>
+
+          </Container>
+        </Card.Body>
+      </Card>
     );
   }
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Container, ListGroup, Spinner } from 'react-bootstrap';
 
 import '../styles/components/categoriesBar.css';
 
@@ -8,19 +9,37 @@ function CategoriesBar(props) {
 
   return (
     <aside className="category-bar">
-      <h1 className="category-bar-title">Categorias:</h1>
-      <ul className="category-bar-list">
-        {categories.map((category) => (
-          <button
-            className="category-bar-item"
-            type="button"
-            key={ category.id }
-            data-testid="category"
-            onClick={ () => onClick(category.id) }
+      {categories.length > 1 ? (
+        <>
+          <h1 className="fs-5 mt-4 fw-normal">Categorias</h1>
+          <ListGroup>
+            {categories.map((category) => (
+              <ListGroup.Item
+                key={ category.id }
+                onClick={ () => onClick(category.id) }
+
+              >
+                <span className="categories-item">{category.name}</span>
+              </ListGroup.Item>
+            ))}
+          </ListGroup>
+        </>
+      )
+        : (
+          <Container
+            className="
+              d-flex
+              justify-content-center align-items-center
+              vh-100
+             "
           >
-            {category.name}
-          </button>))}
-      </ul>
+            <Spinner animation="border" role="status">
+              <span className="visually-hidden">Loading...</span>
+            </Spinner>
+          </Container>
+
+        )}
+
     </aside>
   );
 }
