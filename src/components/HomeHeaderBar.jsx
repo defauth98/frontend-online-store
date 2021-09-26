@@ -1,6 +1,8 @@
+/* eslint-disable react/jsx-max-depth */
 import React, { useContext, useState } from 'react';
 import { Container, Form, Navbar, Button, FormControl } from 'react-bootstrap';
 
+import { Link } from 'react-router-dom';
 import SearchIcon from '../assets/search.svg';
 import CartIcon from '../assets/cart.svg';
 import { productContext } from '../contexts/productsContext';
@@ -41,9 +43,12 @@ function HomeHeaderBar() {
         </Form>
 
         <Form className="d-flex w-10 align-items-center">
-          <Button variant="outline-secondary">
-            <img src={ CartIcon } alt="Icone do carrinho" />
-          </Button>
+          <Link to="/Cart">
+            <Button variant="outline-secondary">
+              <img src={ CartIcon } alt="Icone do carrinho" />
+            </Button>
+          </Link>
+
           <h1 className="fs-3 text-white px-3 pt-2">{cartSize}</h1>
         </Form>
       </Container>

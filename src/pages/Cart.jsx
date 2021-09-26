@@ -1,138 +1,66 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+
+import { Container, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+// import { productContext } from '../contexts/productsContext';
 
-class Cart extends React.Component {
-  /**
-   * @param {{cartProduct: [{"title":"Compressor De Ar Mini Bateria ","price":79,"thumbnail":"http://http2.mlstatic.com/D_021-I.jpg","id":"MLB1832642322"}...{}]}} props
-  */
-  constructor(props) {
-    super(props);
+import Headerbar from '../components/HeaderBar';
 
-    const { cartProduct } = this.props;
+function Cart() {
+  // const { cart } = useContext(productContext);
 
-    this.state = { cartProduct };
-    cartProduct.forEach((ele) => { ele.quantProduct = 1; });
-  }
+  const mockCart = [
+    {
+      title: 'Capa Para Cobrir Carro Forrada Tamanho P M G',
+      price: 53.91,
+      itemId: 'MLB1483023137',
+      imagePath: 'http://http2.mlstatic.com/D_740032-MLB46990918075_082021-I.jpg',
+    },
+    { title: 'Kit 2 Farol Milha 14 Leds 42w 12v/24v Redondo Off-road 6000k', price: 48.88, itemId: 'MLB1739863449', imagePath: 'http://http2.mlstatic.com/D_782725-MLB46766312864_072021-I.jpg' },
+    { title: 'Assento Infantil Para Carro MultikitemIds Baby Safe Booster Preto', price: 90.05, itemId: 'MLB1932580026', imagePath: 'http://http2.mlstatic.com/D_992883-MLA32323875408_092019-I.jpg' },
+    { title: 'Manopla Bola De Câmbio Marcha Onix Prisma 2013 2014 2015 2016 2017 Cobalt Spin Sonic', price: 35.9, itemId: 'MLB1243188545', imagePath: 'http://http2.mlstatic.com/D_998968-MLB31780928992_082019-I.jpg' },
+    { title: 'Som Automotivo First Option 8850b Com Usb, Bluetooth E Leitor De Cartão Sd', price: 79, itemId: 'MLB1930652132', imagePath: 'http://http2.mlstatic.com/D_679517-MLA44490936819_012021-I.jpg' },
+  ];
 
-  handleChange = (e, itemId) => {
-    const { cartProduct } = this.state;
-    const pedido = cartProduct.filter((ele) => ele.id === itemId);
-    const result = pedido[0].quantProduct;
-
-    if (e.target.name === 'productIncreaseQuantity') {
-      console.log('Incremento', result);
-
-      this.setState((state, props) => {
-        const pedidoState = state.cartProduct.filter((ele) => ele.id === itemId);
-        const pedidoProps = props.cartProduct.filter((ele) => ele.id === itemId);
-        pedidoState[0].quantProduct = pedidoProps[0].quantProduct + 1;
-        return state;
-      });
-    }
-
-    if (e.target.name === 'productDecreaseQuantity') {
-      console.log('Decremento', result);
-
-      this.setState((state, props) => {
-        const pedidoState = state.cartProduct.filter((ele) => ele.id === itemId);
-        const pedidoProps = props.cartProduct.filter((ele) => ele.id === itemId);
-        pedidoState[0].quantProduct = pedidoProps[0].quantProduct - 1;
-        return state;
-        // cartProduct: [{
-        //   ...state.cartProduct[0],
-        //   quantProduct: result - 1,
-        // }],
-      });
-    }
-  };
-
-  render() {
-    const { cartProduct } = this.state;
-    const cartItems = (
-      <section className="cart-page">
-
-        {cartProduct.map(({ id, price, thumbnail, title, quantProduct }, index) => (
-          <div key={ index } className="item-container">
-            <img src={ thumbnail } alt={ title } className="item-thumbnail" />
-
-            <div className="info-container">
-              <h1
-                data-testid="shopping-cart-product-name"
-                className="item-name"
+  return (
+    <>
+      <Headerbar noLink />
+      {mockCart.length
+        ? (
+          <Container className="py-5">
+            { mockCart.map((cartItem) => (
+              <div
+                key={ cartItem.itemId }
+                className="d-flex border m-2"
               >
-                {title}
-              </h1>
-              <p className="item-price">
-                {`R$${price}`}
-              </p>
-            </div>
+                <img src={ cartItem.imagePath } alt={ cartItem.title } />
+                <div className="mx-2">
+                  <p className="my-2">{cartItem.title}</p>
+                  <p>
+                    R$
+                    {cartItem.price}
+                  </p>
+                </div>
 
-            <div className="quantity-container">
-              <button
-                key={ index }
-                type="button"
-                className="increase-item-quantity quantity-btn"
-                data-testid="product-increase-quantity"
-                name="productIncreaseQuantity"
-                onClick={ (e) => this.handleChange(e, id) }
-              >
-                +
-              </button>
-              <strong
-                data-testid="shopping-cart-product-quantity"
-                className="item-quantity-number "
-              >
-                { quantProduct }
-              </strong>
+              </div>
+            ))}
 
-              <button
-                key={ index + 1 }
-                type="button"
-                className="decrease-item-quantity quantity-btn"
-                data-testid="product-decrease-quantity"
-                name="productDecreaseQuantity"
-                onClick={ (e) => this.handleChange(e, id) }
-              >
-                -
-              </button>
-            </div>
+            <Container
+              className="d-flex justify-content-center my-5"
+            >
+              <Link to="/checkout">
+                <Button variant="primary">Finalizar compra</Button>
+              </Link>
+            </Container>
 
-          </div>))}
-      </section>
-    );
+          </Container>
 
-    const noItems = (
-      <p data-testid="shopping-cart-empty-message" className="cart-empty-message">
-        Seu carrinho está vazio
-      </p>
-    );
-
-    return (
-      <div className="cart-btn-container">
-        { cartProduct.length > 0 && <h1 className="cart-title">Itens no carrinho</h1>}
-
-        { cartProduct.length === 0 ? noItems : cartItems}
-
-        <Link
-          to="/checkout"
-          data-testid="checkout-products"
-          className="cart-btn-link"
-        >
-          <button type="button" className="cart-btn">
-            Finalizar compra
-          </button>
-        </Link>
-
-      </div>
-    );
-  }
+        )
+        : (
+          <h1>Não tem muito nao</h1>
+        )}
+    </>
+  );
 }
-
-Cart.propTypes = {
-  cartProduct: PropTypes.arrayOf(
-    PropTypes.object,
-  ).isRequired,
-};
 
 export default Cart;
