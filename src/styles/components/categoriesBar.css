@@ -1,32 +1,3 @@
-.category-bar {
-  width: 15%;
-  display: flex;
-  flex-direction: column;
-  border-right: 2px solid #ddd;
-  margin: 2rem
-}
-
-.category-bar-title {
-  margin: 1rem;
-  font-weight: 500;
-  font-size: 1.5rem;
-}
-
-.category-bar-list {
-  display: flex;
-  flex-direction: column;
-  margin-left: 2rem;
-}
-
-.category-bar-item {
-  background: transparent;
-  border: none;
-  transition: all 0.2s;
-  text-align: left;
-  margin-bottom: 0.2rem;
-  width: 80%;
-}
-
-.category-bar-item:hover {
-  color: orange;
+.categories-item {
+  cursor: pointer;
 }

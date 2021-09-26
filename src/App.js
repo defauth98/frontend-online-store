@@ -1,14 +1,16 @@
 import React from 'react';
 import Routes from './Routes';
 
-import './global.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-class App extends React.Component {
-  render() {
-    return (
+import { ProductContextProvider } from './contexts/productsContext';
+
+function App() {
+  return (
+    <ProductContextProvider>
       <Routes />
-    );
-  }
+    </ProductContextProvider>
+  );
 }
 
 export default App;

@@ -1,0 +1,11 @@
+.list-products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@media (max-width: 1391px) {
+  .list-products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

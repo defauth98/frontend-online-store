@@ -1,83 +1,64 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useContext, useEffect } from 'react';
 
+import {
+  Container,
+  Row,
+  Col,
+} from 'react-bootstrap';
 import CategoriesBar from '../components/CategoriesBar';
-import ListProducts from '../components/listProducts';
-import SearchBar from '../components/SearchBar';
+import ListProducts from '../components/ListProducts';
+import sadEmoji from '../assets/emoji-frown.svg';
 
-import { getCategories, getProductsFromCategoryAndQuery } from '../services/api';
+import { productContext } from '../contexts/productsContext';
+import HomeHeaderBar from '../components/HomeHeaderBar';
 
-import '../styles/pages/home.css';
+function Home() {
+  const {
+    fetchCategories,
+    productsList,
+  } = useContext(productContext);
 
-class Home extends React.Component {
-  constructor(props) {
-    super(props);
+  useEffect(() => {
+    async function getCategories() {
+      await fetchCategories();
+    }
+    getCategories();
+  }, []);
 
-    this.fetchCategories = this.fetchCategories.bind(this);
-    this.getProductsFromCategory = this.getProductsFromCategory.bind(this);
+  return (
+    <>
+      <HomeHeaderBar />
+      <Container className="">
+        <Row>
+          <Col sm={ 3 }>
+            <CategoriesBar />
+          </Col>
 
-    this.state = {
-      categories: [],
-      productsList: [],
-    };
-  }
-
-  componentDidMount() {
-    this.fetchCategories();
-  }
-
-  async getProductsFromCategory(categoryId) {
-    const response = await getProductsFromCategoryAndQuery(categoryId);
-
-    this.setState({ productsList: response.results });
-  }
-
-  generateArray = async (item) => {
-    const array = await getProductsFromCategoryAndQuery(false, item);
-    this.setState({
-      productsList: array.results,
-    });
-  }
-
-  async fetchCategories() {
-    const categories = await getCategories();
-
-    this.setState({ categories });
-  }
-
-  render() {
-    const { categories, productsList } = this.state;
-    const { addToCart, cartSize } = this.props;
-
-    return (
-      <main className="home-page">
-        <CategoriesBar
-          categories={ categories }
-          onClick={ this.getProductsFromCategory }
-        />
-
-        <section className="products-section">
-          <SearchBar func={ this.generateArray } cartSize={ cartSize } />
-
-          <div className="project-list">
-            {productsList.length === 0
-              ? <p>Nenhum produto foi encontrado</p>
+          <Col sm={ 5 } className="w-75 ">
+            {productsList
+              ? <ListProducts />
               : (
-                <ListProducts
-                  productsList={ productsList }
-                  addToCart={ addToCart }
-                />)}
-          </div>
+                <Container
+                  className="
+                      d-flex flex-column
+                      align-items-center justify-content-center
+                      vh-100 vw-75
+                     "
+                >
+                  <img
+                    src={ sadEmoji }
+                    alt="Emoji triste"
+                    width="40px"
+                    className="mb-4"
+                  />
+                  <p>Nenhum produto foi encontrado</p>
+                </Container>)}
+          </Col>
 
-        </section>
-      </main>
-    );
-  }
+        </Row>
+      </Container>
+    </>
+  );
 }
-
-Home.propTypes = {
-  addToCart: PropTypes.func.isRequired,
-  cartSize: PropTypes.number.isRequired,
-};
 
 export default Home;
