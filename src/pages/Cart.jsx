@@ -39,12 +39,10 @@ function Cart() {
                 <Button variant="primary">Finalizar compra</Button>
               </Link>
             </Container>
-
           </Container>
-
         )
         : (
-          <h1>Não tem muito nao</h1>
+          <h1>Não há produtos no carrinho</h1>
         )}
     </>
   );

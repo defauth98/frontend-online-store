@@ -1,5 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable react/jsx-max-depth */
 import React, { useContext, useEffect } from 'react';
 
 import {
@@ -8,7 +6,7 @@ import {
   Col,
 } from 'react-bootstrap';
 import CategoriesBar from '../components/CategoriesBar';
-import ListProducts from '../components/listProducts';
+import ListProducts from '../components/ListProducts';
 import sadEmoji from '../assets/emoji-frown.svg';
 
 import { productContext } from '../contexts/productsContext';
@@ -28,7 +26,7 @@ function Home() {
   }, []);
 
   return (
-    <main className="home-page">
+    <>
       <HomeHeaderBar />
       <Container className="">
         <Row>
@@ -59,7 +57,7 @@ function Home() {
 
         </Row>
       </Container>
-    </main>
+    </>
   );
 }
 

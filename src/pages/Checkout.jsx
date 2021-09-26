@@ -1,10 +1,6 @@
 import React, { useContext } from 'react';
-import PropTypes from 'prop-types';
-
 import { Container } from 'react-bootstrap';
-// import { Link } from 'react-router-dom';
-// import CartResume from '../components/CartResume';
-// import Form from '../components/form';
+
 import Headerbar from '../components/HeaderBar';
 import EvaluateProductForm from '../components/EvaluateProductForm';
 import { productContext } from '../contexts/productsContext';
@@ -36,11 +32,8 @@ function Checkout() {
 
                 </div>
               ))}
-
             </Container>
-
             <EvaluateProductForm />
-
           </>
         )
         : (
@@ -53,10 +46,5 @@ function Checkout() {
     </>
   );
 }
-
-Checkout.propTypes = {
-  cartProducts: PropTypes.arrayOf(PropTypes.object),
-  totalPrice: PropTypes.number,
-}.isRequired;
 
 export default Checkout;

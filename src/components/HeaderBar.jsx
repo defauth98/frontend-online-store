@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-/* eslint-disable react/jsx-max-depth */
 import React, { useContext } from 'react';
 import { Form, Navbar, TabContainer, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
