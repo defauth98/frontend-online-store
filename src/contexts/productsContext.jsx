@@ -41,7 +41,16 @@ function ProductContextProvider({ children }) {
     const newCartArray = [...cart, productItem];
 
     setCart(newCartArray);
+
     setCartSize(cartSize ? cartSize + 1 : 1);
+  }
+
+  async function getProductData(productId) {
+    const productResponse = await fetch(`https://api.mercadolibre.com/items/${productId}`);
+
+    const parsedJson = await productResponse.json();
+
+    setProduct(parsedJson);
   }
 
   return (
@@ -53,6 +62,7 @@ function ProductContextProvider({ children }) {
         product,
         cart,
         isLoading,
+        getProductData,
         getProductsFromCategory,
         fetchCategories,
         getProductsFromQuery,

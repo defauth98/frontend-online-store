@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
@@ -8,60 +9,60 @@ import '../styles/components/product.css';
 
 const MAX_LENGTH = 25;
 
-class Product extends React.Component {
-  render() {
-    const { title, imagePath, price, itemId, techSpecs, addToCart } = this.props;
-    const location = {
-      pathname: `/itemDetails/${itemId}`,
-      state: techSpecs,
-    };
+function Product(props) {
+  const { title, imagePath, price, itemId, techSpecs, addToCart } = props;
+  const location = {
+    pathname: `/itemDetails/${itemId}`,
+    state: techSpecs,
+  };
 
-    const product = {
-      id: itemId,
-      title,
-      thumbnail: imagePath,
-      price,
-    };
+  const product = {
+    title,
+    price,
+    id: itemId,
+    imagePath,
+  };
 
-    return (
-      <Card style={ { width: '15rem', height: '24rem' } } className="m-2">
+  return (
+    <Card style={ { width: '15rem', height: '24rem' } } className="m-2">
 
-        <Card.Img variant="top" className="h-50" src={ imagePath } />
+      <Card.Img variant="top" className="h-50" src={ imagePath } />
 
-        <Card.Body>
-          <Card.Title>
-            {title.length > MAX_LENGTH
-              ? `${String(title).substring(0, MAX_LENGTH)}${' '}...`
-              : String(title)}
-          </Card.Title>
+      <Card.Body>
+        <Card.Title>
+          {title.length > MAX_LENGTH
+            ? `${String(title).substring(0, MAX_LENGTH)}${' '}...`
+            : String(title)}
+        </Card.Title>
 
-          <Card.Text>{`R$${price}` }</Card.Text>
+        <Card.Text>{`R$${price}`}</Card.Text>
 
-          <Container className="mt-4 d-flex p-0">
-            <Link to={ location } className="me-auto">
-              <Button
-                variant="primary"
-                style={ { height: '2rem' } }
-                className="d-flex"
-              >
-                Ver detalhes
-              </Button>
-            </Link>
-
+        <Container className="mt-4 d-flex p-0">
+          <Link
+            to={ location }
+            className="me-auto"
+          >
             <Button
-              onClick={ () => addToCart(product) }
+              variant="primary"
               style={ { height: '2rem' } }
               className="d-flex"
-              variant="secondary"
             >
-              <img src={ CartPlusIcon } alt="Icone Adicionar ao carrinho" />
+              Ver detalhes
             </Button>
+          </Link>
+          <Button
+            onClick={ () => addToCart(product) }
+            style={ { height: '2rem' } }
+            className="d-flex"
+            variant="secondary"
+          >
+            <img src={ CartPlusIcon } alt="Icone Adicionar ao carrinho" />
+          </Button>
 
-          </Container>
-        </Card.Body>
-      </Card>
-    );
-  }
+        </Container>
+      </Card.Body>
+    </Card>
+  );
 }
 
 Product.propTypes = {

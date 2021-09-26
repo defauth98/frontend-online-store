@@ -1,41 +1,41 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/jsx-max-depth */
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import {
-  Form,
-  Navbar,
-  TabContainer,
-  Button,
   Container,
 } from 'react-bootstrap';
 
-import CartIcon from '../assets/cart.svg';
-
 import ProductDetailItem from '../components/ProductDetailItem';
 import ProductEvaluate from '../components/ProductEvaluate';
+import { productContext } from '../contexts/productsContext';
+
+import '../styles/pages/productDetail.css';
+import Headerbar from '../components/HeaderBar';
 
 function ProductDetails() {
+  const params = useParams();
+  const { itemId } = params;
+  const { product, getProductData } = useContext(productContext);
+
+  useEffect(() => {
+    async function getDataAsync() {
+      await getProductData(itemId);
+    }
+    getDataAsync();
+  }, [itemId]);
+
   return (
     <>
-      <Navbar
-        bg="dark"
-        variant="dark"
-        className="d-flex justify-content-between px-5"
-      >
-        <TabContainer className="">
-          <Navbar.Brand>Frontend Online Store</Navbar.Brand>
+      <Headerbar />
+      {product && (
+        <Container className="d-flex mt-4">
+          <ProductDetailItem product={ product } />
+          <ProductEvaluate />
+        </Container>
+      )}
 
-          <Form className="d-flex w-10 align-items-center">
-            <Button variant="outline-secondary">
-              <img src={ CartIcon } alt="Icone do carrinho" />
-            </Button>
-          </Form>
-        </TabContainer>
-      </Navbar>
-      <Container className="d-flex mt-4">
-        <ProductDetailItem />
-        <ProductEvaluate />
-      </Container>
     </>
   );
 }
