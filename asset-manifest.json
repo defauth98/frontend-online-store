@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/frontend-online-store/static/css/main.f873aa41.chunk.css",
-    "main.js": "/frontend-online-store/static/js/main.d18ce224.chunk.js",
-    "main.js.map": "/frontend-online-store/static/js/main.d18ce224.chunk.js.map",
+    "main.js": "/frontend-online-store/static/js/main.6822894a.chunk.js",
+    "main.js.map": "/frontend-online-store/static/js/main.6822894a.chunk.js.map",
     "runtime-main.js": "/frontend-online-store/static/js/runtime-main.2928fc3e.js",
     "runtime-main.js.map": "/frontend-online-store/static/js/runtime-main.2928fc3e.js.map",
     "static/css/2.aabde3dc.chunk.css": "/frontend-online-store/static/css/2.aabde3dc.chunk.css",
-    "static/js/2.8aed357e.chunk.js": "/frontend-online-store/static/js/2.8aed357e.chunk.js",
-    "static/js/2.8aed357e.chunk.js.map": "/frontend-online-store/static/js/2.8aed357e.chunk.js.map",
+    "static/js/2.9dee9c49.chunk.js": "/frontend-online-store/static/js/2.9dee9c49.chunk.js",
+    "static/js/2.9dee9c49.chunk.js.map": "/frontend-online-store/static/js/2.9dee9c49.chunk.js.map",
     "index.html": "/frontend-online-store/index.html",
-    "precache-manifest.b4b1013e17e60db5db1afefc5d759265.js": "/frontend-online-store/precache-manifest.b4b1013e17e60db5db1afefc5d759265.js",
+    "precache-manifest.77202a17984b098dfe7316a742f35f3a.js": "/frontend-online-store/precache-manifest.77202a17984b098dfe7316a742f35f3a.js",
     "service-worker.js": "/frontend-online-store/service-worker.js",
     "static/css/2.aabde3dc.chunk.css.map": "/frontend-online-store/static/css/2.aabde3dc.chunk.css.map",
     "static/css/main.f873aa41.chunk.css.map": "/frontend-online-store/static/css/main.f873aa41.chunk.css.map",
-    "static/js/2.8aed357e.chunk.js.LICENSE.txt": "/frontend-online-store/static/js/2.8aed357e.chunk.js.LICENSE.txt",
+    "static/js/2.9dee9c49.chunk.js.LICENSE.txt": "/frontend-online-store/static/js/2.9dee9c49.chunk.js.LICENSE.txt",
     "static/media/cart-plus.svg": "/frontend-online-store/static/media/cart-plus.f64bea91.svg",
     "static/media/cart.svg": "/frontend-online-store/static/media/cart.a1b7999d.svg",
     "static/media/emoji-frown.svg": "/frontend-online-store/static/media/emoji-frown.d0da6995.svg",
@@ -22,8 +22,8 @@
   "entrypoints": [
     "static/js/runtime-main.2928fc3e.js",
     "static/css/2.aabde3dc.chunk.css",
-    "static/js/2.8aed357e.chunk.js",
+    "static/js/2.9dee9c49.chunk.js",
     "static/css/main.f873aa41.chunk.css",
-    "static/js/main.d18ce224.chunk.js"
+    "static/js/main.6822894a.chunk.js"
   ]
 }
