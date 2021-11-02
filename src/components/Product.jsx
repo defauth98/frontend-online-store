@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { Card, Button, Container } from 'react-bootstrap';
+import { Card, Container } from 'react-bootstrap';
 import CartPlusIcon from '../assets/cart-plus.svg';
 
 import '../styles/components/product.css';
@@ -42,22 +42,17 @@ function Product(props) {
             to={ location }
             className="me-auto"
           >
-            <Button
-              variant="primary"
-              style={ { height: '2rem' } }
-              className="d-flex"
-            >
+            <button type="button" className="details-button">
               Ver detalhes
-            </Button>
+            </button>
           </Link>
-          <Button
+          <button
+            type="button"
+            className="add-to-cart-button"
             onClick={ () => addToCart(product) }
-            style={ { height: '2rem' } }
-            className="d-flex"
-            variant="secondary"
           >
             <img src={ CartPlusIcon } alt="Icone Adicionar ao carrinho" />
-          </Button>
+          </button>
 
         </Container>
       </Card.Body>

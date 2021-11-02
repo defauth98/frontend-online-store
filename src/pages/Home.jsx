@@ -12,6 +12,8 @@ import sadEmoji from '../assets/emoji-frown.svg';
 import { productContext } from '../contexts/productsContext';
 import HomeHeaderBar from '../components/HomeHeaderBar';
 
+import '../styles/pages/home.css';
+
 function Home() {
   const {
     fetchCategories,
@@ -26,9 +28,9 @@ function Home() {
   }, []);
 
   return (
-    <>
+    <div className="home-page-container">
       <HomeHeaderBar />
-      <Container className="">
+      <Container>
         <Row>
           <Col sm={ 3 }>
             <CategoriesBar />
@@ -57,7 +59,7 @@ function Home() {
 
         </Row>
       </Container>
-    </>
+    </div>
   );
 }
 

@@ -1,3 +1,8 @@
 .categories-item {
   cursor: pointer;
 }
+
+.category-bar {
+  margin-top: 2rem;
+  border: 1px solid rgba(0,0,0,.125);
+}

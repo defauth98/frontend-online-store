@@ -10,19 +10,16 @@ function CategoriesBar() {
   return (
     <aside className="category-bar">
       {categories ? (
-        <>
-          <h1 className="fs-5 mt-4 fw-normal">Categorias</h1>
-          <ListGroup>
-            {categories.map((category) => (
-              <ListGroup.Item
-                key={ category.id }
-                onClick={ () => getProductsFromCategory(category.id) }
-              >
-                <span className="categories-item">{category.name}</span>
-              </ListGroup.Item>
-            ))}
-          </ListGroup>
-        </>
+        <ListGroup class="categories-bar">
+          {categories.map((category) => (
+            <ListGroup.Item
+              key={ category.id }
+              onClick={ () => getProductsFromCategory(category.id) }
+            >
+              <span className="categories-item">{category.name}</span>
+            </ListGroup.Item>
+          ))}
+        </ListGroup>
       ) : (
         <Container
           className="

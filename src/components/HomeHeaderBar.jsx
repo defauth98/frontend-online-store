@@ -29,12 +29,13 @@ function HomeHeaderBar() {
         <Form className="d-flex w-50 justify-content-evenly">
           <FormControl
             type="search"
+            search
             placeholder="Nome do produto"
             aria-label="Search"
             className="w-75"
             onChange={ (ev) => { setSearchQuery(ev.target.value); } }
           />
-          <Button variant="warning" onClick={ handleSearch }>
+          <Button variant="light" onClick={ handleSearch }>
             <img
               src={ SearchIcon }
               alt="Icone de pesquisar"
@@ -44,7 +45,7 @@ function HomeHeaderBar() {
 
         <Form className="d-flex w-10 align-items-center">
           <Link to="/Cart">
-            <Button variant="outline-secondary">
+            <Button variant="light">
               <img src={ CartIcon } alt="Icone do carrinho" />
             </Button>
           </Link>
