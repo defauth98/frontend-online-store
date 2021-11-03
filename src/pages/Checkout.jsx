@@ -19,7 +19,7 @@ function Checkout() {
               { cart.map((cartItem) => (
                 <div
                   key={ cartItem.itemId }
-                  className="d-flex border m-2"
+                  className="cart-item d-flex border m-2"
                 >
                   <img src={ cartItem.imagePath } alt={ cartItem.title } />
                   <div className="mx-2">

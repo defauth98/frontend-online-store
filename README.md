@@ -1,21 +1,24 @@
 <h1 align="center">Frontend Online Store</h1>
+
 <p align="center">
-  <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
-  <a href="https://twitter.com/defauth8" target="_blank">
-  </a>
+  <img alt="Version" src=".github/frontend-online-store.gif" width="=800rem" />
 </p>
 
-**Descrição**
+### :computer: Projeto
 
 Projeto realizado durante o curso de desenvolvimento de Software na Trybe, feito em grupo para colocar em praticas as métodologias ágeis, como Kanban e Scrum. E consite em listar e buscar por produtos usando a API do mercado livre.
 
+Link do projeto: https://defauth98.github.io/frontend-online-store/#/
+
 ### :nut_and_bolt: Tecnologias
 
-Esse projeto foi desenvolvido com a seguinte técnologia:
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - [React][reactjs]
+- [Bootstrap][bootstrap]
 
 [reactjs]: https://reactjs.org
+[bootstrap]: https://getbootstrap.com/
 
 ### :thinking: Como rodar
 
