@@ -6,6 +6,8 @@ import { productContext } from '../contexts/productsContext';
 
 import Headerbar from '../components/HeaderBar';
 
+import '../styles/pages/cart.css';
+
 function Cart() {
   const { cart } = useContext(productContext);
 
@@ -36,13 +38,16 @@ function Cart() {
               className="d-flex justify-content-center my-5"
             >
               <Link to="/checkout">
-                <Button variant="primary">Finalizar compra</Button>
+                <Button variant="primary">Comprar</Button>
               </Link>
             </Container>
           </Container>
         )
         : (
-          <h1>Não há produtos no carrinho</h1>
+          <Container className="empty-cart">
+            <p>:(</p>
+            <p>Você não tem produtos no carrinho</p>
+          </Container>
         )}
     </>
   );
