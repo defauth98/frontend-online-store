@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/frontend-online-store/static/css/main.0ea19ebf.chunk.css",
-    "main.js": "/frontend-online-store/static/js/main.c1224982.chunk.js",
-    "main.js.map": "/frontend-online-store/static/js/main.c1224982.chunk.js.map",
+    "main.css": "/frontend-online-store/static/css/main.df289e11.chunk.css",
+    "main.js": "/frontend-online-store/static/js/main.55210f9e.chunk.js",
+    "main.js.map": "/frontend-online-store/static/js/main.55210f9e.chunk.js.map",
     "runtime-main.js": "/frontend-online-store/static/js/runtime-main.2928fc3e.js",
     "runtime-main.js.map": "/frontend-online-store/static/js/runtime-main.2928fc3e.js.map",
     "static/css/2.aabde3dc.chunk.css": "/frontend-online-store/static/css/2.aabde3dc.chunk.css",
-    "static/js/2.c22488e5.chunk.js": "/frontend-online-store/static/js/2.c22488e5.chunk.js",
-    "static/js/2.c22488e5.chunk.js.map": "/frontend-online-store/static/js/2.c22488e5.chunk.js.map",
+    "static/js/2.27b42f5a.chunk.js": "/frontend-online-store/static/js/2.27b42f5a.chunk.js",
+    "static/js/2.27b42f5a.chunk.js.map": "/frontend-online-store/static/js/2.27b42f5a.chunk.js.map",
     "index.html": "/frontend-online-store/index.html",
-    "precache-manifest.b35593815a4f5e86cae0b70e63259e17.js": "/frontend-online-store/precache-manifest.b35593815a4f5e86cae0b70e63259e17.js",
+    "precache-manifest.6c209c5f5ef4d7eb42646dbbd13e2764.js": "/frontend-online-store/precache-manifest.6c209c5f5ef4d7eb42646dbbd13e2764.js",
     "service-worker.js": "/frontend-online-store/service-worker.js",
     "static/css/2.aabde3dc.chunk.css.map": "/frontend-online-store/static/css/2.aabde3dc.chunk.css.map",
-    "static/css/main.0ea19ebf.chunk.css.map": "/frontend-online-store/static/css/main.0ea19ebf.chunk.css.map",
-    "static/js/2.c22488e5.chunk.js.LICENSE.txt": "/frontend-online-store/static/js/2.c22488e5.chunk.js.LICENSE.txt",
+    "static/css/main.df289e11.chunk.css.map": "/frontend-online-store/static/css/main.df289e11.chunk.css.map",
+    "static/js/2.27b42f5a.chunk.js.LICENSE.txt": "/frontend-online-store/static/js/2.27b42f5a.chunk.js.LICENSE.txt",
     "static/media/cart-plus.svg": "/frontend-online-store/static/media/cart-plus.93aa0df5.svg",
     "static/media/cart.svg": "/frontend-online-store/static/media/cart.316e7619.svg",
     "static/media/emoji-frown.svg": "/frontend-online-store/static/media/emoji-frown.d0da6995.svg",
@@ -22,8 +22,8 @@
   "entrypoints": [
     "static/js/runtime-main.2928fc3e.js",
     "static/css/2.aabde3dc.chunk.css",
-    "static/js/2.c22488e5.chunk.js",
-    "static/css/main.0ea19ebf.chunk.css",
-    "static/js/main.c1224982.chunk.js"
+    "static/js/2.27b42f5a.chunk.js",
+    "static/css/main.df289e11.chunk.css",
+    "static/js/main.55210f9e.chunk.js"
   ]
 }
