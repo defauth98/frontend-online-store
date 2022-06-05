@@ -13,7 +13,7 @@ function Headerbar({ noLink }) {
 
     <Navbar bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="#">Frontend Online Store</Navbar.Brand>
+        <Navbar.Brand href="/">Frontend Online Store</Navbar.Brand>
 
         <Form className="d-flex w-10 align-items-center">
           {!noLink && (
