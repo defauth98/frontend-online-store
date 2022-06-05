@@ -5,7 +5,6 @@ import {
   Container,
 } from 'react-bootstrap';
 
-import { Helmet } from 'react-helmet';
 import ProductDetailItem from '../components/ProductDetailItem';
 import ProductEvaluate from '../components/ProductEvaluate';
 import { productContext } from '../contexts/productsContext';
@@ -26,48 +25,6 @@ function ProductDetails() {
 
   return (
     <>
-      <Helmet>
-        <meta name="title" content="Frontend Online Store" />
-        <meta name="description" content="Ecommerce" />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://defauth98.github.io/frontend-online-store/"
-        />
-        <meta
-          property="og:title"
-          content={ product ? product.title : '' }
-        />
-        <meta
-          property="og:description"
-          content="Web site created using create-react-app"
-        />
-        <meta
-          property="og:image"
-          content="https://cdn.shopify.com/s/files/1/0070/7032/files/how-to-price-a-product.jpg?v=1611727768"
-        />
-        <meta
-          property="twitter:card"
-          content="summary_large_image"
-        />
-        <meta
-          property="twitter:url"
-          content="https://defauth98.github.io/frontend-online-store/"
-        />
-        <meta
-          property="twitter:title"
-          content={ product ? product.title : '' }
-        />
-        <meta
-          property="twitter:description"
-          content="Web site created using create-react-app"
-        />
-        <meta
-          property="twitter:image"
-          content="https://cdn.shopify.com/s/files/1/0070/7032/files/how-to-price-a-product.jpg?v=1611727768"
-        />
-      </Helmet>
-
       <Headerbar />
       {product && (
         <Container className="d-flex mt-4">
@@ -75,7 +32,6 @@ function ProductDetails() {
           <ProductEvaluate />
         </Container>
       )}
-
     </>
   );
 }
