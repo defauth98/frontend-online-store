@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "42867ffb29d88317709b28fe2351f97c",
+    "revision": "3c028f36d5a76953abec6b484c2c10c8",
     "url": "/frontend-online-store/index.html"
   },
   {
-    "revision": "6b5ac9492769acd6a0c5",
+    "revision": "363a2f3187c4058bf71e",
     "url": "/frontend-online-store/static/css/2.aabde3dc.chunk.css"
   },
   {
-    "revision": "ce4f405bd4573588633a",
-    "url": "/frontend-online-store/static/css/main.df289e11.chunk.css"
+    "revision": "0a2efac6b6abba470324",
+    "url": "/frontend-online-store/static/css/main.6bbb50e3.chunk.css"
   },
   {
-    "revision": "6b5ac9492769acd6a0c5",
-    "url": "/frontend-online-store/static/js/2.27b42f5a.chunk.js"
+    "revision": "363a2f3187c4058bf71e",
+    "url": "/frontend-online-store/static/js/2.a9957a43.chunk.js"
   },
   {
     "revision": "1bde7cbddc37293b60694441b834365b",
-    "url": "/frontend-online-store/static/js/2.27b42f5a.chunk.js.LICENSE.txt"
+    "url": "/frontend-online-store/static/js/2.a9957a43.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ce4f405bd4573588633a",
-    "url": "/frontend-online-store/static/js/main.55210f9e.chunk.js"
+    "revision": "0a2efac6b6abba470324",
+    "url": "/frontend-online-store/static/js/main.7d5d7c3c.chunk.js"
   },
   {
     "revision": "a2d408d9505863c5fc2c",
@@ -36,8 +36,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/frontend-online-store/static/media/cart.316e7619.svg"
   },
   {
-    "revision": "d0da699533f7a9651f6d7c815b365eec",
-    "url": "/frontend-online-store/static/media/emoji-frown.d0da6995.svg"
+    "revision": "714dcbbb167e3c15902602e702ffc1de",
+    "url": "/frontend-online-store/static/media/emoji-frown.714dcbbb.svg"
   },
   {
     "revision": "1f1f0b44751b2aa6acffe565729f4466",
